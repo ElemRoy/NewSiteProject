@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Main</title>
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <div id="wrapper">
+    	<div class="header">
+    		<div class="inner-header">
+    			<div class="topnav" id="myTopnav">
+				  <a href="#home" class="active">Головна</a>
+				  <a href="#news">Дорога розробки</a>
+				  <a href="#faq">F.A.Q</a>
+				  <a href="#about">Про Нас</a>
+				  <a href="#contact">Контакти</a>
+				  <a href="#register">Зарегіструватися</a>
+    		</div>
+    	</div>
+    </div>
+    	<div class="row">
+    	<div class="sidebar-1">
+            <div class="inner-sidebar-1"></div>
+           </div>
+        <div class="content">
+        	<div class="inner-content">
+    <div class="cselect">
+  <select onchange="admSelectCheck2(this);" id="Profession">
+    <option value="0">Профессія</option>
+    <option value="1" id="Programmer">Програміст</option>
+    <option value="2" disabled="disabled">Підприємець</option>
+  </select>
+</div>
+<div class="cselect">
+  <select id="Age">
+    <option value="0">Вік</option>
+    <option value="1" disabled="disabled">6-10</option>
+    <option value="6" disabled="disabled">11-13</option>
+    <option value="9" id="NeededAge">14-16</option>
+    <option value="12" disabled="disabled">17-19</option>
+    <option value="3" disabled="disabled">20-23</option>
+  </select>
+  </div>
+  <div class="cselect" id="Programming" style="display:none;">
+  <select id="direction" onchange="admSelectCheck(this);">
+    <option value="0">Напрямок</option>
+    <option value="13" id="web2">Веб</option>
+    <option value="2" id="software2" disabled="disabled">ПО</option>
+    <option value="3" id="games2" disabled="disabled">Ігри</option>
+  </select> 
+  </div>
+  <div id="web3" style="display:none;">
+  <select id="Web">
+    <option value="0">Напрямок</option>
+    <option value="14" id="Front-End">Front-End</option>
+    <option value="2" disabled="disabled">Back-End</option>
+    <option value="3" disabled="disabled">Full-Stack</option>
+  </select>
+  </div>
+  <div id="games3" style="display:none;">
+  <select id="Games">
+    <option value="0">Напрямок</option>
+    <option value="1">Gameplay Developer</option>
+    <option value="2">Engine Developer</option>
+    <option value="3">Animation Developer</option>
+    <option value="1">DevOps Developer</option>
+    <option value="2">Tools Developer</option>
+    <option value="3">UI Developer</option>
+    <option value="1">Graphics Programmer</option>
+    <option value="2">Audio Developer</option>
+    <option value="3">Client Developer</option>
+    <option value="3">Back-end Developer</option>
+  </select> 
+  </div>
+  <div  id="software3" style="display:none;">
+  <select id="Software">
+    <option value="0">Напрямок</option>
+    <option value="1">Machine Learning</option>
+    <option value="2">Big Data</option>
+    <option value="3">Blockchain</option>
+    <option value="3" >AI</option>
+  </select>
+  </div>
+   <div class="cselect">
+  <select id="Knowledge">
+    <option value="0">Знання</option>
+    <option value="15" id="Starter">Новачок</option>
+    <option value="2" disabled="disabled">Середній</option>
+    <option value="2" disabled="disabled">Високий</option>
+  </select>
+</div>
+   <div class="cselect">
+  <select id="City">
+    <option value="0">М.Проживання</option>
+    <option value="16" id="Lviv">м.Львів</option>
+    <option value="2" disabled="disabled">м.Київ</option>
+  </select>
+</div> 
+<div class="cselect">
+  <select id="Money">
+    <option value="0">М.Забезпеченність</option>
+    <option value="1" disabled="disabled">Низька</option>
+    <option value="27" id="MediumMoney">Середня</option>
+    <option value="2" disabled="disabled">Висока</option>
+  </select>
+</div>
+  <div>
+  	<div><input class="button" type="button" value="Почати" onclick="Update1()"></div>
+  <div id="Front-End-Medium" style="display: none;">
+  	<div>
+  	<h1 class="number">1</h1>
+  	<div class="course">
+  		<img src="img/HTML Academy.png" alt="HTML" style="width:100%;">
+        <div class="centered">Пройти курс <a href="https://htmlacademy.ru/">HTML Academy</a></div>
+  	</div>
+  	<div class="course-text">
+  		<p>Пройти курс HTML і CSS повністю</p>
+  	</div>
+  </div>
+  <div>
+  	<h1 class="number">2</h1>
+  	<div class="course">
+  		<img src="img/bootstrap-social.png" alt="HTML" style="width:100%;">
+  	</div>
+  	<div class="course-text">
+  		<p>Вивчити Bootstrap</p>
+  	</div>
+  	<div class="course">
+  		<img src="img/W3schools_website.png" alt="HTML" style="width:100%;">
+  	</div>
+  	<div class="course-text">
+  		<p>Вивчити Bootstrap</p>
+  	</div>
+  </div>
+  <div>
+  <h1 class="number">3</h1>
+  	<div class="course book">
+  		<img src="img/book.jpg" alt="HTML" style="width:100%;">
+  	</div>
+  	<div class="course-text">
+  		<p>Прочитати книгу "HTML5 + CSS3. Основы современного WEB-дизайна"</p>
+  	</div>
+  </div>
+  <div>
+  <h1 class="number">4</h1>
+  	<div class="course">
+  		<img src="img/site_preview_ru_1200x630.png" alt="HTML" style="width:100%;">
+  	</div>
+  	<div class="course-text">
+  		<p>Пройти курс LearnJavaScript</p>
+  	</div>
+  </div>
+  <div>
+  <h1 class="number">5</h1>
+  	<div class="course video">
+  		<iframe width="560" height="315" src="https://www.youtube.com/embed/B4jWRrz3FUM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  	</div>
+  	<div class="course-text">
+  		<p>Подивитися туторіал по jQuery</p>
+  	</div>
+  </div>
+  </div> 
+  </div>  
+</div>
+        </div>
+        <div class="sidebar-2">
+            <div class="inner-sidebar-2"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="inner-footer none"></div>
+            </div>
+    </div>
+    <div class="footer">
+            <div class="inner-footer"></div>
+            </div>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
